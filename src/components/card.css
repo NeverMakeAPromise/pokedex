@@ -4,13 +4,30 @@
   align-items: center;
   background-color: #cfbb41;
   padding: 20px 10px;
-  border-radius: 5px;
+  border: 7px solid black;
+  border-radius: 7px;
   margin: 20px 0;
-  border: 10px solid #e3bb30;
 }
 
 .pokeCard img {
   height: 200px;
   border-radius: 5px;
+  border: 10px ridge #e3bb30;
+  margin-bottom: 10px;
+}
+
+.pokeCard li {
+  list-style: none;
+}
+
+.pokeCard div {
+  list-style: none;
+  padding: 10px 2px;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.pokeCard ul {
   border: 10px solid #e3bb30;
+  background-color: #cfbb41;
 }

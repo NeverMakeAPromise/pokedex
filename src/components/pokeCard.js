@@ -17,16 +17,26 @@ export default async function createPokeCard(props) {
   const pokeWeight = createElement("p", {
     innerText: `Weight: ${pokeData.weight} kg`,
   });
-  const pokeAbility = createElement("p", {
-    innerText: `JAVASCRIPT POWER: ${pokeData.abilities[0].ability.name}`,
-  });
+
+  console.log(pokeData.abilities);
+
   const pokeCard = createElement(
     "div",
     {
       className: "pokeCard",
     },
 
-    [title, pokeWeight, pokeIMG, pokeAbility]
+    [title, pokeWeight, pokeIMG]
   );
+
+  const pokeAbilityListDiv = createElement("div");
+
+  pokeData.abilities.forEach((ability) => {
+    const abi = createElement("li", {
+      innerText: `JAVASCRIPT POWERMOVE: ${ability.ability.name}`,
+    });
+    pokeAbilityListDiv.append(abi);
+  });
+  pokeCard.append(pokeAbilityListDiv);
   return pokeCard;
 }
