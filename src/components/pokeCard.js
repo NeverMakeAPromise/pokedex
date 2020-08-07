@@ -18,8 +18,6 @@ export default async function createPokeCard(props) {
     innerText: `Weight: ${pokeData.weight} kg`,
   });
 
-  console.log(pokeData.abilities);
-
   const pokeCard = createElement(
     "div",
     {
