@@ -1,0 +1,31 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "^4.2.1",
+    "file-loader": "^6.0.0",
+    "live-server": "^1.2.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:build": "webpack --watch",
+    "dev:server": "live-server dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeverMakeAPromise/pokedex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NeverMakeAPromise/pokedex/issues"
+  },
+  "homepage": "https://github.com/NeverMakeAPromise/pokedex#readme"
+}
