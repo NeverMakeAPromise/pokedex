@@ -1,0 +1,16 @@
+.pokeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #cfbb41;
+  padding: 20px 10px;
+  border-radius: 5px;
+  margin: 20px 0;
+  border: 10px solid #e3bb30;
+}
+
+.pokeCard img {
+  height: 200px;
+  border-radius: 5px;
+  border: 10px solid #e3bb30;
+}
