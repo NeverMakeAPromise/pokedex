@@ -14,8 +14,24 @@ export default async function createPokeCard(props) {
     `https://pokeapi.co/api/v2/pokemon/${props.title}`
   );
   const pokeData = await pokeDataFetch.json();
-  const pokeWeight = createElement("p", {
+  const pokeDataDiv = createElement("div");
+
+  const pokeWeight = createElement("li", {
     innerText: `Weight: ${pokeData.weight} kg`,
+  });
+  const pokeHeight = createElement("li", {
+    innerText: `Height: ${pokeData.height} cm`,
+  });
+
+  pokeDataDiv.append(pokeWeight);
+  pokeDataDiv.append(pokeHeight);
+
+  const pokeAbilityListDiv = createElement("div");
+  pokeData.abilities.forEach((ability) => {
+    const abi = createElement("li", {
+      innerText: `POWERMOVE: ${ability.ability.name}`,
+    });
+    pokeAbilityListDiv.append(abi);
   });
 
   const pokeCard = createElement(
@@ -24,17 +40,7 @@ export default async function createPokeCard(props) {
       className: "pokeCard",
     },
 
-    [title, pokeWeight, pokeIMG]
+    [title, pokeWeight, pokeHeight, pokeIMG, pokeAbilityListDiv]
   );
-
-  const pokeAbilityListDiv = createElement("div");
-
-  pokeData.abilities.forEach((ability) => {
-    const abi = createElement("li", {
-      innerText: `JAVASCRIPT POWERMOVE: ${ability.ability.name}`,
-    });
-    pokeAbilityListDiv.append(abi);
-  });
-  pokeCard.append(pokeAbilityListDiv);
   return pokeCard;
 }

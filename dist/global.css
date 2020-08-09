@@ -1,10 +1,47 @@
 @import url(https://fonts.googleapis.com/css2?family=Orbitron&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Sriracha&display=swap);
 
 body {
   font-family: "Orbitron";
   font-size: 0.6rem;
+  background-color: #000;
+  display: grid;
+  place-items: center;
 }
 
 ul {
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #f7df43;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+button {
+  background-color: #000;
+  border: 2px solid #f7df43;
+  color: #f7df43;
+  border-radius: 8px;
+  padding: 10px 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Sriracha";
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2em;
+}
+
+button:hover {
+  background-color: #f7df43;
+  border: 2px solid #f7df43;
+  color: #000;
 }

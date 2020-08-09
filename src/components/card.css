@@ -1,28 +1,83 @@
-.pokeCard {
+/* .pokeCard {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #cfbb41;
+  background-color: #f79e75;
   padding: 20px 10px;
-  border: 7px solid black;
-  border-radius: 7px;
+  border: 5px solid #f7df43;
+  border-radius: 10px;
   margin: 20px 0;
+
+  position: relative;
+  width: 285px;
+  height: 440px;
+  box-shadow: 2px 4px 10px -2px;
+} */
+
+.pokeCard {
+  filter: blur(2px);
+  padding: 1rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  margin: 10px;
+  border: 5px solid #f7df43;
+  border-radius: 10px;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  opacity: 0.2;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+.pokeCard:hover {
+  filter: blur(0px);
+  opacity: 0.8;
+  background: linear-gradient(
+    30deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .pokeCard img {
-  height: 200px;
+  max-width: 220px;
   border-radius: 5px;
-  border: 10px ridge #e3bb30;
-  margin-bottom: 10px;
-}
-
-.pokeCard li {
-  list-style: none;
+  filter: saturate(1);
+  border: 10px solid #fff;
+  margin: 20px 0px;
 }
 
 .pokeCard div {
   list-style: none;
   padding: 10px 2px;
+  margin: 10px 0;
   border-bottom: 1px solid black;
   border-top: 1px solid black;
 }
@@ -30,4 +85,11 @@
 .pokeCard ul {
   border: 10px solid #e3bb30;
   background-color: #cfbb41;
+}
+
+.pokeCard li {
+  list-style: none;
+  font-family: sans-serif;
+  text-transform: none;
+  font-size: 1.4em;
 }
